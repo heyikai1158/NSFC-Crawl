@@ -13,12 +13,16 @@ aHR0cHM6Ly9rZC5uc2ZjLmdvdi5jbi9yZXN1bHRJbml0
 ### API接口
 
 > baseQuery/search
+![0](https://github.com/heyikai1158/NSFC-Crawl/assets/61925519/b19f33c5-1532-46c2-8b22-c416261509d2)
+
 
 ## 步骤
 
 ### No.1 看JS
 
 去**主***JS*中找接口请求写在哪里
+
+![1](https://github.com/heyikai1158/NSFC-Crawl/assets/61925519/9ba9cdaa-9fd6-4f44-a031-21eac0426441)
 
 ```javascript
 S = function (e, t) {
@@ -27,6 +31,8 @@ S = function (e, t) {
 ```
 
 找**方法D**
+
+![2](https://github.com/heyikai1158/NSFC-Crawl/assets/61925519/d5a0b9a0-e675-426b-9445-0de6e05d582a)
 
 ```javascript
 D = function (e, t, n) {
@@ -46,16 +52,19 @@ D = function (e, t, n) {
 w.fn.parcel(e)
 ```
 
+![3](https://github.com/heyikai1158/NSFC-Crawl/assets/61925519/6b1c20a7-9b66-4fb2-bce7-f18137d976bf)
 ```javascript
 var w = b
 ```
 
+![4](https://github.com/heyikai1158/NSFC-Crawl/assets/61925519/d5d3cd31-5599-400d-985d-095e559f6102)
 ```javascript
 b.fn = Object.assign({}, i)
 ```
 
 找***方法parcel***
 
+![5](https://github.com/heyikai1158/NSFC-Crawl/assets/61925519/5a656984-4bfc-498c-8b8b-ec15abc865b3)
 ```javascript
 var i = {};
 n.r(i), n.d(i, "parcel", (function () {
@@ -65,6 +74,7 @@ n.r(i), n.d(i, "parcel", (function () {
 
 找***方法P***
 
+![6](https://github.com/heyikai1158/NSFC-Crawl/assets/61925519/e817ab30-49ba-41b0-b2da-7095830139e3)
 ```javascript
 function p(e) {
     var t = g.a.enc.Utf8.parse("SecretIs"), n = g.a.DES.decrypt({ciphertext: g.a.enc.Base64.parse(e)}, t, {
@@ -76,6 +86,9 @@ function p(e) {
 ```
 
 ### No.2 根据JS解密源码改写python的DES解密代码
+
+![7](https://github.com/heyikai1158/NSFC-Crawl/assets/61925519/1ed49c1c-0100-44c2-ab95-237777731903)
+
 导入必需的包模块
 ```python
 from Crypto.Cipher import DES
